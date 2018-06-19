@@ -100,9 +100,6 @@ on init
     write /dev/cpuset/application/background/cpus 0-7
     write /dev/cpuset/application/cpus 0-7
 
-    chown system system /sys/module/battery_saver/parameters/enabled
-    chmod 0664 /sys/module/battery_saver/parameters/enabled
-
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice

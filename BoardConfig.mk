@@ -77,7 +77,7 @@ AUDIO_FEATURE_ENABLED_SSR := true
 AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
 
 # Battery Saver
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power-libperfmgr/power/power-mode.cpp
+#TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/configs/power/power-mode.cpp
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
