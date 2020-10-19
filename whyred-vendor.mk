@@ -19,6 +19,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/whyred/proprietary/vendor/etc/diracvdd.bin:$(TARGET_COPY_OUT_VENDOR)/etc/diracvdd.bin \
     vendor/xiaomi/whyred/proprietary/vendor/lib/libDiracAPI_SHARED.so:$(TARGET_COPY_OUT_VENDOR)/lib/libDiracAPI_SHARED.so \
     vendor/xiaomi/whyred/proprietary/vendor/lib/soundfx/libdirac.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdirac.so \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/etc/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/lib/hw/audio.primary.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.sdm660.so \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/lib/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinycompress.so \
     vendor/xiaomi/whyred/proprietary/vendor/etc/MIUI_DualCamera_watermark.png:$(TARGET_COPY_OUT_VENDOR)/etc/MIUI_DualCamera_watermark.png \
     vendor/xiaomi/whyred/proprietary/vendor/etc/MIUI_Time.ttf:$(TARGET_COPY_OUT_VENDOR)/etc/MIUI_Time.ttf \
     vendor/xiaomi/whyred/proprietary/vendor/etc/Miui-Light.ttf:$(TARGET_COPY_OUT_VENDOR)/etc/Miui-Light.ttf \
