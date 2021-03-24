@@ -103,6 +103,11 @@ PRODUCT_PACKAGES += \
 # Powerhint
 EAS_POWERHINT_VARIANT := sdm636
 
+
+# Perf
+PRODUCT_COPY_FILES += \ 
+    $(DEVICE_PATH)/configs/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
+
 # Adapt Launch
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/lm/AdaptLaunchFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/AdaptLaunchFeature.xml
