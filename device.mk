@@ -16,6 +16,7 @@
 #
 # This file sets variables that control the way modules are built
 # thorughout the system. It should not be used to conditionally
+
 # disable makefiles (the proper mechanism to control what gets
 # included in a build is to use PRODUCT_PACKAGES in a product
 # definition file).
@@ -37,10 +38,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
-# APEX
-TARGET_SUPPORTS_UPDATABLE_APEX := true
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-$(call inherit-product-if-exists, vendor/prebuilts/config/apex.mk)
+# Xiaomi Parts
+$(call inherit-product-if-exists, vendor/XiaomiParts/xiaomiparts.mk)
 
 # Powerhint
 ifeq ($(EAS_POWERHINT_VARIANT), sdm636)
