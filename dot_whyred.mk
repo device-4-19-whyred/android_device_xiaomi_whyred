@@ -28,6 +28,9 @@ $(call inherit-product, vendor/dot/config/common.mk)
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
+# Inherit from custom xiaomiparts vendor
+$(call inherit-product, vendor/dirac/dirac.mk)
+
 # Inherit from whyred device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
