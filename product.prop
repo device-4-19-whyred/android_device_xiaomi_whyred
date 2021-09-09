@@ -9,6 +9,7 @@ persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.profile_update=true
 
 # Graphics
+debug.sdm.support_writeback=0
 debug.sf.early_app_phase_offset_ns=1500000
 debug.sf.early_phase_offset_ns=500000
 debug.sf.early_gl_app_phase_offset_ns=15000000
@@ -87,3 +88,10 @@ ro.hwui.text_small_cache_width=1024
 ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=4096
+
+# Gboard
+ro.com.google.ime.kb_pad_port_l=7
+ro.com.google.ime.kb_pad_port_r=7 
+ro.com.google.ime.kb_pad_land_l=14
+ro.com.google.ime.kb_pad_land_r=14
+ro.com.google.ime.kb_pad_port_b=1

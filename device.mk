@@ -38,9 +38,6 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
-# Xiaomi Parts
-$(call inherit-product, vendor/XiaomiParts/xiaomiparts.mk)
-
 # Powerhint
 ifeq ($(EAS_POWERHINT_VARIANT), sdm636)
 PRODUCT_COPY_FILES += \

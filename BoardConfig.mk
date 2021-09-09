@@ -139,11 +139,11 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
-TARGET_KERNEL_CONFIG := vendor/whyred_defconfig
+TARGET_KERNEL_CONFIG := vendor/mystic-whyred_defconfig
 TARGET_KERNEL_VERSION := 4.19
 TARGET_KERNEL_CLANG_COMPILE := true
-#TARGET_KERNEL_CLANG_VERSION := predator
-#KERNEL_TOOLCHAIN := /predator/doto/prebuilts/clang/host/linux-x86/clang-predator
+#TARGET_KERNEL_CLANG_VERSION := proton
+#KERNEL_TOOLCHAIN := /predator/doto/prebuilts/clang/host/linux-x86/clang-proton
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
