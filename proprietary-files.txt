@@ -1353,12 +1353,13 @@ vendor/bin/time_daemon|d647fa02dfb28b6cb981c4e77daee75a67406351
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|c8e0bbc9c6b7b5beddba43bc4125a9eaeba7c79f
 
-# Thermal - from ginkgo V12.5.1.0.RCOCNXM
-vendor/bin/thermal-engine|6cd660e2b813896670a14be244d1046afe90064e
-vendor/lib/libthermalclient.so|0aab8039958acdd27af71c5c6923dcd7208f886f
-vendor/lib/libthermalfeature.so|52c35a4e2bc048839e4f9172cc2d299e2367a1fd
-vendor/lib64/libthermalclient.so|ed01fa6caeb9dfbddc0fafc197abe13f3c8b56f9
-vendor/lib64/libthermalfeature.so|f2b78560b6b87c19336ae48ea26d3af756123047
+# Thermal - from lemon-11-RKQ1.201004.002
+vendor/bin/mi_thermald|2cb2d46219c6bc7005b61a6960b9f674049a586c 
+vendor/bin/thermal-engine|d60f20b3642ee6401503bdc48ad80dead64f79a6 
+vendor/etc/init/init_thermal-engine.rc|f0d14aa4734b2e8afd61a4eed73238187b268f48 
+vendor/etc/init/init.mi_thermald.rc|2b2891d3c47888c6da7266dfeec9e71b02e511a5 
+-vendor/lib/libthermalclient.so|196acc1aaae1810ea9ba56bf9e1bb9ee2e486f6a
+-vendor/lib64/libthermalclient.so|18d9f7ec494d7c7d1744b14072ac0565daa5dc5d
 
 # TUI - from jasmine
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|a0d692fe10ef9dc4479497fa666640612f06fbb4
