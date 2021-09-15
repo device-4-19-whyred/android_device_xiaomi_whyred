@@ -2961,76 +2961,12 @@ case "$target" in
         case "$soc_id" in
                 "317" | "324" | "325" | "326" | "345" | "346" )
 
-            # configure governor settings for little cluster
-            echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-            echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-            echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
-            echo 1401600 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
-            echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
-            echo 633600 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
-            echo 902400 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
-
-            # configure governor settings for big cluster
-            echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-            echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
-            echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
-            echo 1401600 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
-            echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
-            echo 1113600 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
-            echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/rtg_boost_freq
-
-            echo 2 > /proc/sys/kernel/sched_window_stats_policy
-            echo 5 > /proc/sys/kernel/sched_ravg_hist_size
-            echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
             echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
             echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
             echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
             echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
             echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/is_big_cluster
             echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
-
-            # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
-            echo -6 >  /sys/devices/system/cpu/cpu0/sched_load_boost
-            echo -6 >  /sys/devices/system/cpu/cpu1/sched_load_boost
-            echo -6 >  /sys/devices/system/cpu/cpu2/sched_load_boost
-            echo -6 >  /sys/devices/system/cpu/cpu3/sched_load_boost
-            echo -6 >  /sys/devices/system/cpu/cpu4/sched_load_boost
-            echo -6 >  /sys/devices/system/cpu/cpu5/sched_load_boost
-            echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
-            echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
-            echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
-            echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
-
-            # Setting b.L scheduler parameters
-            echo 96 > /proc/sys/kernel/sched_upmigrate
-            echo 90 > /proc/sys/kernel/sched_downmigrate
-            echo 140 > /proc/sys/kernel/sched_group_upmigrate
-            echo 120 > /proc/sys/kernel/sched_group_downmigrate
-
-            # Report max frequency to unity tasks
-            echo "UnityMain,libunity.so" > /proc/sys/kernel/sched_lib_name
-            echo 255 > /proc/sys/kernel/sched_lib_mask_force 255
-
-            # Enable bus-dcvs
-            for device in /sys/devices/platform/soc
-            do
-                for cpubw in $device/*cpu-cpu-ddr-bw/devfreq/*cpu-cpu-ddr-bw
-                do
-                    echo "bw_hwmon" > $cpubw/governor
-                    echo 50 > $cpubw/polling_interval
-                    echo 762 > $cpubw/min_freq
-                    echo "1525 3143 5859 7759 9887 10327 11863 13763" > $cpubw/bw_hwmon/mbps_zones
-                    echo 4 > $cpubw/bw_hwmon/sample_ms
-                    echo 85 > $cpubw/bw_hwmon/io_percent
-                    echo 100 > $cpubw/bw_hwmon/decay_rate
-                    echo 50 > $cpubw/bw_hwmon/bw_step
-                    echo 20 > $cpubw/bw_hwmon/hist_memory
-                    echo 0 > $cpubw/bw_hwmon/hyst_length
-                    echo 80 > $cpubw/bw_hwmon/down_thres
-                    echo 0 > $cpubw/bw_hwmon/guard_band_mbps
-                    echo 250 > $cpubw/bw_hwmon/up_scale
-                    echo 1600 > $cpubw/bw_hwmon/idle_mbps
-                done
 
             # Setting b.L scheduler parameters
             echo 96 > /proc/sys/kernel/sched_upmigrate
