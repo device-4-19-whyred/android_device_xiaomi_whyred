@@ -202,7 +202,6 @@
     <!-- HFP end -->
     <!-- echo reference -->
     <ctl name="AUDIO_REF_EC_UL1 MUX" value="None" />
-    <ctl name="EC Reference Channels" value="Zero"/>
     <!-- usb headset -->
     <ctl name="AFE_PCM_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="AFE_PCM_RX Audio Mixer MultiMedia2" value="0" />
@@ -381,7 +380,7 @@
     <ctl name="RDAC2 MUX" value="ZERO" />
 
     <!-- Interpolator chain controls -->
-	<!-- ADD RX Chain Controls --> 
+	<!-- ADD RX Chain Controls -->
 
     <ctl name="RX1 MIX1 INP1" value="ZERO" />
     <ctl name="RX2 MIX1 INP1" value="ZERO" />
@@ -452,21 +451,15 @@
     <path name="echo-reference speaker-vbat-mono-2">
     </path>
 
-   <path name="echo-reference speaker-vbat">
-   </path>
+    <path name="echo-reference speaker-vbat">
+    </path>
 
     <path name="echo-reference">
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="INT4_MI2S_RX" />
-        <ctl name="EC Reference Channels" value="Two"/>
     </path>
 
     <path name="echo-reference headphones">
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="INT0_MI2S_RX" />
-        <ctl name="EC Reference Channels" value="Two"/>
-    </path>
-
-    <path name="echo-reference headset">
-         <path name="echo-reference headphones" />
     </path>
 
    <path name="echo-reference bt-sco">
@@ -483,25 +476,6 @@
     </path>
 
     <path name="echo-reference headphones-44.1">
-        <path name="echo-reference headphones" />
-    </path>
-
-    <path name="echo-reference-voip">
-        <ctl name="AUDIO_REF_EC_UL1 MUX" value="INT4_MI2S_RX" />
-        <ctl name="EC Reference Channels" value="Two"/>
-    </path>
-
-    <path name="echo-reference-voip headphones">
-        <ctl name="AUDIO_REF_EC_UL1 MUX" value="INT0_MI2S_RX" />
-        <ctl name="EC Reference Channels" value="Two"/>
-    </path>
-
-    <path name="echo-reference-voip headset">
-        <path name="echo-reference-voip headphones" />
-    </path>
-
-    <path name="echo-reference-voip headphones-44.1">
-        <path name="echo-reference-voip headphones" />
     </path>
     
     <path name="echo-reference-voip bt-sco">
@@ -520,6 +494,7 @@
     <path name="deep-buffer-playback">
         <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
+
     <path name="deep-buffer-playback speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
@@ -599,6 +574,7 @@
     <path name="low-latency-playback">
         <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
+
     <path name="low-latency-playback speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
@@ -625,11 +601,11 @@
         <path name="low-latency-playback bt-sco" />
     </path>
 
-    <!-- lct add for whatsapp call ring -->    
-    <path name="low-latency-playback speaker-and-bt-sco-wb"> 
-	 <path name="low-latency-playback bt-sco-wb" /> 
-	 <path name="low-latency-playback speaker" /> 
-    </path> 
+    <!-- lct add for whatsapp call ring -->
+    <path name="low-latency-playback speaker-and-bt-sco-wb">
+        <path name="low-latency-playback bt-sco-wb" />
+        <path name="low-latency-playback speaker" />
+    </path>
     
     <path name="low-latency-playback speaker-and-hdmi">
         <path name="low-latency-playback hdmi" />
@@ -868,6 +844,7 @@
     <path name="compress-offload-playback2">
         <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia7" value="1" />
     </path>
+
     <path name="compress-offload-playback2 speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia7" value="1" />
     </path>
@@ -950,6 +927,7 @@
     <path name="compress-offload-playback3">
         <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia10" value="1" />
     </path>
+
     <path name="compress-offload-playback3 speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia10" value="1" />
     </path>
@@ -1064,7 +1042,6 @@
         <path name="compress-offload-playback4 display-port" />
         <path name="compress-offload-playback4 speaker" />
     </path>
-
 
     <path name="compress-offload-playback4 afe-proxy">
         <ctl name="AFE_PCM_RX Audio Mixer MultiMedia11" value="1" />
@@ -1569,11 +1546,11 @@
     </path>
 
     <path name="low-latency-record">
-      <ctl name="MultiMedia8 Mixer INT3_MI2S_TX" value="1" />
+        <ctl name="MultiMedia8 Mixer INT3_MI2S_TX" value="1" />
     </path>
 
     <path name="low-latency-record bt-sco">
-      <ctl name="MultiMedia8 Mixer SLIM_7_TX" value="1" />
+        <ctl name="MultiMedia8 Mixer SLIM_7_TX" value="1" />
     </path>
 
     <path name="low-latency-record bt-sco-wb">
@@ -1822,11 +1799,13 @@
         <ctl name="INT0_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer INT3_MI2S_TX_MMode1" value="1" />
     </path>
+
     <path name="voicemmode1-call speaker">
         <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer INT3_MI2S_TX_MMode1" value="1" />
         <ctl name="VOC_EXT_EC MUX" value="PRI_MI2S_TX" />
     </path>
+
     <path name="voicemmode1-call headphones">
         <ctl name="INT0_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer INT3_MI2S_TX_MMode1" value="1" />
@@ -1877,11 +1856,13 @@
         <ctl name="INT0_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer INT3_MI2S_TX_MMode2" value="1" />
     </path>
+
     <path name="voicemmode2-call speaker">
         <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer INT3_MI2S_TX_MMode2" value="1" />
         <ctl name="VOC_EXT_EC MUX" value="PRI_MI2S_TX" />
     </path>
+
     <path name="voicemmode2-call headphones">
         <ctl name="INT0_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer INT3_MI2S_TX_MMode2" value="1" />
@@ -1931,9 +1912,11 @@
    <path name="spkr-rx-calib">
         <ctl name="INT4_MI2S_RX_DL_HL Switch"  value="1" />
     </path>
+
     <path name="spkr-rx-calib speaker">
         <ctl name="PRI_MI2S_RX_DL_HL Switch"  value="1" />
     </path>
+
     <path name="spkr-vi-record">
     </path>
 
@@ -2014,6 +1997,7 @@
         <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
         <ctl name="SpkrRight WSA PA Mute" value="0" />
     </path>
+
 <!-- HTH-32892 HTH-32895 ADD by duanlongfei for MIUI SOS feature at 20180919 start -->
     <path name="incall_music_uplink">
         <ctl name="Incall_Music Audio Mixer MultiMedia2" value="1" />
@@ -2127,6 +2111,7 @@
         <path name="incall_music_uplink2" />
     </path>
 <!-- HTH-32892 ADD by duanlongfei for MIUI SOS feature at 20180919 end -->
+
     <path name="speaker-fluid">
         <path name="speaker-mono" />
     </path>
@@ -2136,15 +2121,15 @@
     </path>
 
    <path name="speaker-vbat-mono">
-       <path name="speaker-mono" />
+        <path name="speaker-mono" />
    </path>
 
    <path name="speaker-vbat-mono-2">
-       <path name="speaker-mono-2" />
+        <path name="speaker-mono-2" />
    </path>
 
    <path name="speaker-vbat">
-       <path name="speaker" />
+        <path name="speaker" />
    </path>
 
    <path name="sidetone-iir">
@@ -2234,7 +2219,9 @@
 
     <path name="handset-mic">
         <path name="adc1" />
-		<ctl name="IIR1 INP1 MUX" value="DEC1" />
+        <ctl name="IIR1 INP1 MUX" value="DEC1" />
+        <ctl name="DEC1 Volume" value="96" />
+        <ctl name="DEC2 Volume" value="96" />
     </path>
 
     <path name="secondary-mic">
@@ -2301,10 +2288,10 @@
 
     <path name="headphones-karaoke">
         <path name="headphones" />
-	<ctl name="RX1 MIX2 INP1" value="IIR1" /> 
-	<ctl name="RX2 MIX2 INP1" value="IIR1" /> 
-	<ctl name="IIR1 INP1 Volume" value="80" /> 
-	<ctl name="IIR1 INP2 Volume" value="80" /> 
+        <ctl name="RX1 MIX2 INP1" value="IIR1" />
+        <ctl name="RX2 MIX2 INP1" value="IIR1" />
+        <ctl name="IIR1 INP1 Volume" value="80" />
+        <ctl name="IIR1 INP2 Volume" value="80" />
     </path>
 
     <path name="true-native-mode">
@@ -2332,7 +2319,7 @@
     </path>
 
     <path name="voice-speaker">
-	<!--ctl name="VOC_EXT_EC MUX" value="PRI_MI2S_TX" /-->
+        <!--ctl name="VOC_EXT_EC MUX" value="PRI_MI2S_TX" /-->
         <path name="speaker" />
     </path>
 
@@ -2538,6 +2525,8 @@
 
     <path name="handset-stereo-dmic-ef">
         <path name="handset-dmic-endfire" />
+        <ctl name="DEC1 Volume" value="96" />
+        <ctl name="DEC2 Volume" value="96" />
     </path>
 
     <path name="speaker-stereo-dmic-ef">
@@ -2556,7 +2545,7 @@
         <path name="dmic-endfire" />
     </path>
     
-    	<path name="voice-speaker-tmic">
+    <path name="voice-speaker-tmic">
         <path name="dmic-endfire" />
     </path>
 
@@ -2566,6 +2555,8 @@
 
     <path name="voice-rec-dmic-ef">
         <path name="dmic-endfire" />
+        <ctl name="DEC7 Volume" value="106"/>
+        <ctl name="DEC8 Volume" value="106"/>
     </path>
 
     <path name="voice-rec-dmic-ef-fluence">
@@ -2681,10 +2672,13 @@
 
     <path name="unprocessed-mic">
         <path name="unprocessed-handset-mic" />
+        <ctl name="DEC7 Volume" value="89"/>
     </path>
 
     <path name="unprocessed-stereo-mic">
         <path name="voice-rec-dmic-ef" />
+        <ctl name="DEC7 Volume" value="89"/>
+        <ctl name="DEC8 Volume" value="89"/>
     </path>
 
     <path name="unprocessed-quad-mic">
@@ -2693,6 +2687,7 @@
 
     <path name="unprocessed-headset-mic">
         <path name="headset-mic" />
+        <ctl name="DEC7 Volume" value="89"/>
     </path>
 
     <!-- Added for ADSP testfwk -->
@@ -2868,11 +2863,11 @@
     </path>
 
     <path name="mmap-record capture-fm">
-      <ctl name="MultiMedia16 Mixer TERT_MI2S_TX" value="1" />
+        <ctl name="MultiMedia16 Mixer TERT_MI2S_TX" value="1" />
     </path>
 
     <path name="mmap-record usb-headset-mic">
-       <ctl name="MultiMedia16 Mixer USB_AUDIO_TX" value="1" />
+        <ctl name="MultiMedia16 Mixer USB_AUDIO_TX" value="1" />
     </path>
 
     <path name="hifi-playback display-port">
@@ -2889,10 +2884,6 @@
 
     <path name="hifi-playback usb-headphones">
         <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia2" value="1" />
-    </path>
-
-    <path name="hifi-record">
-        <ctl name="MultiMedia2 Mixer INT3_MI2S_TX" value="1" />
     </path>
 
     <path name="hifi-record usb-headset-mic">
