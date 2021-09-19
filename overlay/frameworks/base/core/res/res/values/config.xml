@@ -525,4 +525,11 @@
     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
     <string name="config_SmartChargingSupspendValue" translatable="false">1</string>
     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+
+     <!-- Device configuration indicating whether we should avoid using accelerated graphics in certain places 
+         to reduce RAM footprint.  This is ignored if ro.config.low_ram is true (in that case this is assumed 
+         true as well).  It can allow you to tune down your device's memory use without going to the point of 
+         causing applications to turn off features. -->
+     <bool name="config_avoidGfxAccel">true</bool>
+
 </resources>
