@@ -3226,13 +3226,13 @@ static u32 debug_suspend;
 static DEFINE_MUTEX(clk_debug_lock);
 static HLIST_HEAD(clk_debug_list);
 
-static struct hlist_head *all_lists[] = {
-	&clk_root_list,
+static struct hlist_head *orphan_list[] = {
 	&clk_orphan_list,
 	NULL,
 };
 
-static struct hlist_head *orphan_list[] = {
+static struct hlist_head *all_lists[] = {
+	&clk_root_list,
 	&clk_orphan_list,
 	NULL,
 };
