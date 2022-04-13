@@ -47,6 +47,11 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
 
+# mod
+PRODUCT_PACKAGES += \
+    dotOSModOverlay-SystemUI \
+    dotOSModOverlay-framework-res
+
 # Permissions
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
