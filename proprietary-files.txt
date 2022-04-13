@@ -1364,3 +1364,8 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|e47baed52f1c0637de34fa55e45a86b
 
 # Wifi - from ginkgo V12.5.1.0.RCOCNXM
 vendor/bin/cnss-daemon|1b840d768c5d49a3a440fffcf526eefa45a7ad5b
+
+# Fix - Sound Record
+vendor/lib/hw/audio.primary.sdm660.so|7874ea0e303a9c969e186cbcb3bff293d40e9695
+vendor/etc/audio_platform_info_intcodec.xml|00ce1ece9acffe2586ac4080b573e89301ae150b
+vendor/lib/libtinycompress.so|c7e6f7da3e5e00cd8781d59171467f75c3dde814
