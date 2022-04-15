@@ -532,4 +532,8 @@
          causing applications to turn off features. -->
      <bool name="config_avoidGfxAccel">true</bool>
 
+
+      <!-- List of comma separated package names for which we the system will not show crash like
+         tts, etc. dialogs. -->
+     <string translatable="false" name="config_appsNotReportingCrashes">com.google.android.tts</string>
 </resources>
