@@ -141,7 +141,7 @@ TARGET_KERNEL_CONFIG := vendor/whyred_defconfig
 TARGET_KERNEL_VERSION := 4.19
 TARGET_KERNEL_CLANG_COMPILE := true
 #TARGET_KERNEL_CLANG_VERSION := proton
-#KERNEL_TOOLCHAIN := /predator/doto/prebuilts/clang/host/linux-x86/clang-proton
+#KERNEL_TOOLCHAIN := /AzureUser/dot2/prebuilts/clang/host/linux-x86/clang-proton
 #TARGET_KERNEL_ADDITIONAL_FLAGS := \
 #       HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
