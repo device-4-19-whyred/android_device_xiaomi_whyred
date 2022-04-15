@@ -152,3 +152,7 @@ on init
     # report max frequency to unity tasks.
     write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
+
+on charger
+    chown system system /sys/class/leds/white/brightness
+    write /sys/class/leds/white/brightness 255
