@@ -14,5 +14,3 @@ get_prop(system_server, userspace_reboot_config_prop)
 get_prop(system_server, userspace_reboot_exported_prop)
 
 allow system_server kernel:system syslog_read;
-
-get_prop(system_server, vendor_persist_camera_prop)
